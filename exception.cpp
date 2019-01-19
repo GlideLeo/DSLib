@@ -77,4 +77,40 @@ Exception::~Exception()
     free(m_location);
 }
 
+ArithmeticException::~ArithmeticException()
+{
+    free(m_message);
+    free(m_location);
+}
+
+NullPointerException::~NullPointerException()
+{
+    free(m_message);
+    free(m_location);
+}
+
+IndexOutOfBoundsException::~IndexOutOfBoundsException()
+{
+    free(m_message);
+    free(m_location);
+}
+
+NoEnoughMemoryException::~NoEnoughMemoryException()
+{
+    free(m_message);
+    free(m_location);
+}
+
+InvalidParameterException::~InvalidParameterException()
+{
+    free(m_message);
+    free(m_location);
+}
+
+InvalidOperationException::~InvalidOperationException()
+{
+    free(m_message);
+    free(m_location);
+}
+
 }

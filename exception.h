@@ -40,7 +40,7 @@ public:
         Exception::operator=(e);
         return *this;
     }
-   // ~ArithmeticException();
+    ~ArithmeticException();
 };
 
 class NullPointerException : public Exception
@@ -57,7 +57,7 @@ public:
         Exception::operator=(e);
         return *this;
     }
-    //~NullPointerException();
+    ~NullPointerException();
 };
 
 class IndexOutOfBoundsException : public Exception
@@ -74,7 +74,7 @@ public:
         Exception::operator=(e);
         return *this;
     }
-    //~IndexOutOfBoundsException();
+    ~IndexOutOfBoundsException();
 };
 
 class NoEnoughMemoryException : public Exception
@@ -91,7 +91,7 @@ public:
         Exception::operator=(e);
         return *this;
     }
-    //~NoEnoughMemoryException();
+    ~NoEnoughMemoryException();
 };
 
 class InvalidParameterException : public Exception
@@ -108,8 +108,27 @@ public:
         Exception::operator=(e);
         return *this;
     }
-    //~InvalidParameterException();
+    ~InvalidParameterException();
 };
+
+class InvalidOperationException : public Exception
+{
+public:
+    InvalidOperationException() : Exception(0){}
+    InvalidOperationException(const char* message) : Exception(message){}
+    InvalidOperationException(const char* file, int line) : Exception(file, line){}
+    InvalidOperationException(const char* message, const char* file, int line) : Exception(message, file, line){}
+    InvalidOperationException(const InvalidOperationException& e) : Exception(e){}
+
+    InvalidOperationException& operator = (const InvalidOperationException& e)
+    {
+        Exception::operator =(e);
+        return *this;
+    }
+
+    ~InvalidOperationException();
+};
+
 }
 
 #endif // EXCEPTION_H
