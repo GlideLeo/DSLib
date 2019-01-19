@@ -10,3 +10,6 @@ SOURCES += \
 HEADERS += \
     smartpointer.h \
     exception.h
+
+RESOURCES += \
+    dslib.qrc
