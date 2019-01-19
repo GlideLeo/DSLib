@@ -1,4 +1,5 @@
 #include "exception.h"
+#include <stdio.h>
 #include <cstring>
 #include <cstdlib>
 
@@ -14,7 +15,7 @@ void Exception::init(const char* message, const char* file, int line)
     {
         char sl[32] = {0};
 
-        itoa(line,sl,10);
+        sprintf(sl,"%d",line);
 
         m_location = static_cast<char*>(malloc(strlen(file) + strlen(sl) + 2));
         m_location = strcpy(m_location, file);

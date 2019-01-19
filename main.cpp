@@ -32,8 +32,8 @@ int main()
 
     try
     {
-        THROW_EXCEPTION(ArithmeticException, "Test");
-        //throw Exception("Test", __FILE__, __LINE__);
+        //THROW_EXCEPTION(Exception, "Test");
+        throw ArithmeticException("Test", __FILE__, __LINE__);
     }
     catch(const Exception& e)
     {

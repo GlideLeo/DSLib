@@ -40,7 +40,7 @@ public:
         Exception::operator=(e);
         return *this;
     }
-    ~ArithmeticException();
+   // ~ArithmeticException();
 };
 
 class NullPointerException : public Exception
@@ -57,7 +57,7 @@ public:
         Exception::operator=(e);
         return *this;
     }
-    ~NullPointerException();
+    //~NullPointerException();
 };
 
 class IndexOutOfBoundsException : public Exception
@@ -74,7 +74,7 @@ public:
         Exception::operator=(e);
         return *this;
     }
-    ~IndexOutOfBoundsException();
+    //~IndexOutOfBoundsException();
 };
 
 class NoEnoughMemoryException : public Exception
@@ -91,7 +91,7 @@ public:
         Exception::operator=(e);
         return *this;
     }
-    ~NoEnoughMemoryException();
+    //~NoEnoughMemoryException();
 };
 
 class InvalidParameterException : public Exception
@@ -108,7 +108,7 @@ public:
         Exception::operator=(e);
         return *this;
     }
-    ~InvalidParameterException();
+    //~InvalidParameterException();
 };
 }
 
