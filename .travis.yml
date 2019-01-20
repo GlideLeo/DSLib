@@ -33,4 +33,4 @@ script:
   - qmake -qt=qt5 DSLib.pro
   - make
   # Run test
-  - ./DSLib
+  #- ./DSLib
