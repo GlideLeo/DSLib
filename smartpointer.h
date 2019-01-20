@@ -1,10 +1,12 @@
 #ifndef SMARTPOINTER_H
 #define SMARTPOINTER_H
 
+#include "object.h"
+
 namespace  DSLib
 {
 template <typename T>
-class SmartPointer  //Smart pointer class
+class SmartPointer : public Object //Smart pointer class
 {
 protected:
     T* m_pointer;
