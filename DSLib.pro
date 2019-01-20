@@ -15,3 +15,8 @@ HEADERS += \
 
 RESOURCES += \
     dslib.qrc
+
+QMAKE_CXXFLAGS += -Wno-unused-parameter
+
+QMAKE_CXXFLAGS += -Wno-unused-variable
+
