@@ -2,6 +2,9 @@
 #include "smartpointer.h"
 #include "exception.h"
 #include "object.h"
+#include "list.h"
+#include "seqlist.h"
+#include "staticlist.h"
 
 using namespace std;
 using namespace DSLib;
@@ -77,5 +80,17 @@ int main()
         cout << e.message() << endl;
         cout << e.location() << endl;
     }
+
+    StaticList<int, 5> l;
+//    StaticList<int,5> l;
+//    for(int i = 0; i < l.capacity(); i++)
+//    {
+//        l.insert(0,i);
+//    }
+//    for(int i = 0; i < l.capacity(); i++)
+//    {
+//        cout << l[i] << endl;
+//    }
+
     return 0;
 }

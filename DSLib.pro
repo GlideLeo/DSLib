@@ -11,7 +11,10 @@ SOURCES += \
 HEADERS += \
     smartpointer.h \
     exception.h \
-    object.h
+    object.h \
+    list.h \
+    seqlist.h \
+    staticlist.h
 
 RESOURCES += \
     dslib.qrc
