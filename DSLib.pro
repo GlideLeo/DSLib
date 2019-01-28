@@ -14,7 +14,8 @@ HEADERS += \
     object.h \
     list.h \
     seqlist.h \
-    staticlist.h
+    staticlist.h \
+    dynamiclist.h
 
 RESOURCES += \
     dslib.qrc
