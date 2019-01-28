@@ -78,7 +78,7 @@ public:
 
     T& operator[] (int i)
     {
-        if((0 <= i) && (i <= m_length))
+        if((0 <= i) && (i < m_length))
         {
             return m_array[i];
         }

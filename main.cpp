@@ -81,16 +81,22 @@ int main()
         cout << e.location() << endl;
     }
 
-    StaticList<int, 5> l;
-//    StaticList<int,5> l;
-//    for(int i = 0; i < l.capacity(); i++)
-//    {
-//        l.insert(0,i);
-//    }
-//    for(int i = 0; i < l.capacity(); i++)
-//    {
-//        cout << l[i] << endl;
-//    }
+    StaticList<int,5> l;
+    for(int i = 0; i < l.capacity(); i++)
+    {
+        l.insert(0,i);
+    }
+    for(int i = 0; i < l.capacity(); i++)
+    {
+        cout << l[i] << endl;
+    }
+
+    try {
+        l[5] = 6;
+    } catch (const Exception& e) {
+        cout << e.message() << endl;
+    }
+
 
     return 0;
 }
