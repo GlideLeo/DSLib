@@ -6,6 +6,9 @@
 #include "seqlist.h"
 #include "staticlist.h"
 #include "dynamiclist.h"
+#include "array.h"
+#include "staticarray.h"
+#include "dynamicarray.h"
 
 using namespace std;
 using namespace DSLib;
@@ -105,6 +108,54 @@ int main()
     for(int i = 0; i < l.length(); i++)
     {
         cout << l[i] << endl;
+    }
+
+    StaticArray<int, 5> s1;
+
+    for(int i = 0; i < s1.length(); i++)
+    {
+        s1[i] = i * i;
+    }
+
+    for(int i = 0; i < s1.length(); i++)
+    {
+        cout << s1[i] << endl;
+    }
+
+    StaticArray<int, 5> s2;
+
+    s2 = s1;
+
+    for(int i = 0; i < s1.length(); i++)
+    {
+        cout << s2[i] << endl;
+    }
+
+    try {
+        s2[6] = 1;
+    } catch (const Exception& e) {
+        cout << e.message() << endl;
+        cout << e.location() << endl;
+    }
+
+    DynamicArray<int> s3(10);
+    DynamicArray<int> s4(10);
+    for(int i = 0; i < s3.length(); i++)
+    {
+        s3[i] = i * i;
+    }
+
+    for(int i = 0; i < s3.length(); i++)
+    {
+        cout << s3[i] << endl;
+    }
+
+    s4 = s3;
+
+    s4.resize(5);
+    for(int i = 0; i < s4.length(); i++)
+    {
+        cout << s4[i] << endl;
     }
 
 
