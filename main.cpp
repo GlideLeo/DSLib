@@ -9,6 +9,7 @@
 #include "array.h"
 #include "staticarray.h"
 #include "dynamicarray.h"
+#include "LinkList.h"
 
 using namespace std;
 using namespace DSLib;
@@ -158,6 +159,19 @@ int main()
         cout << s4[i] << endl;
     }
 
+    LinkList<int> list;
+
+    for(int i = 0; i < 5; i++)
+    {
+        list.insert(i);
+    }
+
+    for(int i = 0; i < list.length(); i++ )
+    {
+        int v = 0;
+        list.get(i,v);
+        cout << v << endl;
+    }
 
     return 0;
 }

@@ -13,7 +13,7 @@ class DynamicArray : public Array<T>
 protected:
     int m_length;
 
-    T* copy(T* array, int len, int newlen)
+    T* copy(T* array, int len, int newlen)  //O(n)
     {
         T* ret = new T[newlen];
 
@@ -30,7 +30,7 @@ protected:
         return ret;
     }
 
-    void update(T* array, int length)
+    void update(T* array, int length) //O(1)
     {
         if(array != nullptr)
         {
@@ -47,7 +47,7 @@ protected:
         }
     }
 
-    void init(T* array, int length)
+    void init(T* array, int length)  //O(1)
     {
         if(array != nullptr)
         {
@@ -60,7 +60,7 @@ protected:
         }
     }
 public:
-    DynamicArray(int length)
+    DynamicArray(int length) //O(1)
     {
         init(new T[length], length);
 //        this -> m_array = new T[length];
@@ -75,7 +75,7 @@ public:
 //        }
     }
 
-    DynamicArray(const DynamicArray<T>& obj)
+    DynamicArray(const DynamicArray<T>& obj) //O(n)
     {
 //        T* array =  copy(obj.m_array, obj.m_length, obj.m_length);
         init(copy(obj.m_array, obj.m_length, obj.m_length), obj.m_length);
@@ -95,7 +95,7 @@ public:
 //            THROW_EXCEPTION(NoEnoughMemoryException,"No memory to create DynamicArray object ...");
 //        }
     }
-    DynamicArray<T>& operator= (const DynamicArray<T>& obj)
+    DynamicArray<T>& operator= (const DynamicArray<T>& obj) //O(n)
     {
         if(this != &obj)
         {
@@ -125,11 +125,11 @@ public:
         return *this;
     }
 
-    int length() const
+    int length() const //O(1)
     {
         return m_length;
     }
-    void resize(int length)
+    void resize(int length) //O(n)
     {
         if(length != m_length)
         {
@@ -160,7 +160,7 @@ public:
         }
     }
 
-    ~DynamicArray()
+    ~DynamicArray() //O(1)
     {
         delete [] this -> m_array;
     }
