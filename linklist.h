@@ -101,6 +101,21 @@ public:
 
         return ret;
     }
+
+    T get(int i) const
+    {
+        T ret;
+
+        if(get(i, ret))
+        {
+            return ret;
+        }
+        else
+        {
+            THROW_EXCEPTION(IndexOutOfBoundsException, "Invalid parameter i to get element ...");
+        }
+    }
+
     bool get(int i, T& e) const
     {
         bool ret = ((0 <= i) && (i < m_length));

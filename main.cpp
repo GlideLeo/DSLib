@@ -9,7 +9,7 @@
 #include "array.h"
 #include "staticarray.h"
 #include "dynamicarray.h"
-#include "LinkList.h"
+#include "linklist.h"
 
 using namespace std;
 using namespace DSLib;
