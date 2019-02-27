@@ -22,6 +22,17 @@ void Object::operator delete[](void* p)
 {
     free(p);
 }
+
+bool Object::operator == (const Object& obj)  //默认实现，地址比较
+{
+    return (this == &obj);
+}
+
+bool Object::operator != (const Object& obj)
+{
+    return (this != &obj);
+}
+
 Object::~Object()
 {
 
